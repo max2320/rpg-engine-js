@@ -1,0 +1,53 @@
+.charset{
+    position: absolute;
+    width:40px;
+    height:40px;
+    background-color: #000;
+    z-index: 9;
+}
+.game{
+    position:fixed;
+    top:50px;
+    left:0;
+    bottom:0;
+    right:0;
+}
+#game{
+    background-repeat: no-repeat;
+}
+#game >div {
+    position:absolute;
+}
+#game >div img{
+    width:20px;
+    height:20px;
+    padding:10px;
+}
+#game{
+    width:100%;
+    height: 100%;
+    position:relative;
+}
+.inventory{
+    position:fixed;
+    top:0;
+    height:45px;
+    border-bottom:#000000 5px solid;
+    left:0;
+    right:0;
+}
+.inventory ul{
+    float:right;
+    list-style:none;
+    margin:5px;
+    padding:0;
+
+}
+.inventory ul li{
+    cursor:pointer;
+    display:inline;
+}
+.inventory ul li img{
+    width:33px;
+    height:33px;
+}
