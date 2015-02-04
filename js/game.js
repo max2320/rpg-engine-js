@@ -151,34 +151,6 @@ Charset.prototype.moveRight = function(map) {
 };
 
 
-window.Maps = function(data, file, triggers) {
-    this.data = data;
-    this.file = file;
-    this.triggers = triggers;
-    console.log(triggers);
-
-};
-Maps.prototype.getTrigger = function(x, y, o) {
-    return this.triggers[y][x][o]();
-}
-Maps.prototype.allow = function(x, y) {
-    console.log('X:' + x + "|Y:" + y);
-    return this.data[y][x];
-};
-Maps.prototype.getDimensionV = function() {
-    return this.data.length;
-};
-Maps.prototype.getDimensionH = function() {
-    return this.data[0].length;
-};
-Maps.prototype.setGrid = function(x, y) {
-
-};
-Maps.prototype.show = function() {
-    game.css({
-        'background': 'url(' + this.file + ') no-repeat'
-    });
-};
 
 window.Control = function(charset, map) {
     $(window).keypress(function(e) {
