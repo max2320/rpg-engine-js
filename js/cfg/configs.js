@@ -1,4 +1,4 @@
 window.config={
-  serverURL : 'http://localhost:3000/'
+  serverURL : 'http://152.255.146.124:3000/'
 
 };

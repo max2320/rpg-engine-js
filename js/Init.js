@@ -2,6 +2,7 @@ var scripts=[
   "js/cfg/configs.js",
   "js/lib/Requests.js",
   "js/lib/Controls.js",
+  "js/lib/Scenarios.js",
 ];
 
 $(function(){
