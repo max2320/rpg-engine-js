@@ -7,7 +7,7 @@ Requests.get = function(url, params, callback){
     url: url,
     data: params,
     success: function(response){
-       console.log(response)
+       console.log(response);
       if(response.code !== undefined  && response.code == "OK"){
         callback(response.message);
       }

@@ -1,10 +1,10 @@
 window.Controls = function() {
     $(window).keypress(function(e) {
         console.log(e.which);
-        var controlsULR = config.serverURL+"controls/"
+        var controlsULR = config.serverURL + "controls/"
         switch (e.which) {
             case 119:
-                Requests.get(controlsULR+"moveup.json",{x:0,y:0},function(data){
+                Requests.get(controlsULR + "moveup.json",{x:0,y:0},function(data){
                     console.log(data)
                     if(data.allow){
                         // charset.moveUp(map);
@@ -13,7 +13,7 @@ window.Controls = function() {
                 });
                 break;
             case 115:
-                Requests.get(controlsULR+"movedown.json",{x:0,y:0},function(data){
+                Requests.get(controlsULR + "movedown.json",{x:0,y:0},function(data){
                     if(data.allow){
                         // charset.moveDown(map);
                         console.log('movedown')
@@ -21,7 +21,7 @@ window.Controls = function() {
                 });
                 break;
             case 97:
-                Requests.get(controlsULR+"moveleft.json",{x:0,y:0},function(data){
+                Requests.get(controlsULR + "moveleft.json",{x:0,y:0},function(data){
                     if(data.allow){
                         // charset.moveLeft(map);
                         console.log('moveleft')
@@ -29,7 +29,7 @@ window.Controls = function() {
                 });
                 break;
             case 100:
-                Requests.get(controlsULR+"moveright.json",{x:0,y:0},function(data){
+                Requests.get(controlsULR + "moveright.json",{x:0,y:0},function(data){
                     if(data.allow){
                         // charset.moveRight(map);
                         console.log('moveright')
@@ -37,7 +37,7 @@ window.Controls = function() {
                 });
                 break;
             case 13:
-                Requests.get(controlsULR+"gotitem.json",{x:0,y:0},function(data){
+                Requests.get(controlsULR + "gotitem.json",{x:0,y:0},function(data){
                     if(data.allow){
                         // charset.gotItem(map);
                         console.log('gotItem')
