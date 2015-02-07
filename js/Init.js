@@ -4,6 +4,8 @@ var scripts=[
   "js/lib/Requests.js",
   "js/lib/Controls.js",
   "js/lib/Scenarios.js",
+  "js/lib/Entities.js",
+  "js/lib/Charset.js",
 ];
 
 $(function(){
@@ -11,5 +13,6 @@ $(function(){
     console.log("Class::" + src);
     $('head').append($('<script>').attr('src',src));
   });
-  var controlTriggers=new Controls();
+  var charset=new Charset('p1');
+  charset.render('#game')
 })
