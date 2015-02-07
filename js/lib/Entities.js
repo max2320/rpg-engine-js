@@ -109,59 +109,51 @@ Entities.prototype.refreshPosition = function(orientation) {
             break;
     }
 };
-Entities.prototype.moveUp = function(map) {
-    if (this.getPositionBY() > 0) {
-        var by = parseInt(this.getPositionBY());
-        if (map.allow(this.getPositionBX(), by - 1)) {
-            var nextPosition = this.getPositionY() - this.getPassos();
-            this.setPosition({
-                'x': this.getPositionX(),
-                'y': nextPosition
-            });
-            this.setPositionBY(by - 1);
-        }
-    }
-    this.refreshPosition(1);
+Entities.prototype.moveUp = function() {
+  if (this.getPositionBY() > 0) {
+    var by = parseInt(this.getPositionBY());
+    var nextPosition = this.getPositionY() - this.getPassos();
+    this.setPosition({
+      'x': this.getPositionX(),
+      'y': nextPosition
+    });
+    this.setPositionBY(by - 1);
+  }
+  this.refreshPosition(1);
 };
 Entities.prototype.moveDown = function(map) {
-    if (this.getPositionBY() < map.getDimensionV()) {
-        var by = parseInt(this.getPositionBY());
-        if (map.allow(this.getPositionBX(), by + 1)) {
-            var nextPosition = this.getPositionY() + this.getPassos();
-            this.setPosition({
-                'x': this.getPositionX(),
-                'y': nextPosition
-            });
-            this.setPositionBY(by + 1);
-        }
-    }
+    
+    var by = parseInt(this.getPositionBY());
+    var nextPosition = this.getPositionY() + this.getPassos();
+    this.setPosition({
+        'x': this.getPositionX(),
+        'y': nextPosition
+    });
+    this.setPositionBY(by + 1);
     this.refreshPosition(0);
 };
 Entities.prototype.moveLeft = function(map) {
     if (this.getPositionBX() > 0) {
-        var bx = parseInt(this.getPositionBX());
-        if (map.allow(bx - 1, this.getPositionBY())) {
-            var nextPosition = this.getPositionX() - this.getPassos();
-            this.setPosition({
-                'x': nextPosition,
-                'y': this.getPositionY()
-            });
-            this.setPositionBX(bx - 1);
-        }
+      var bx = parseInt(this.getPositionBX());
+      var nextPosition = this.getPositionX() - this.getPassos();
+      this.setPosition({
+          'x': nextPosition,
+          'y': this.getPositionY()
+      });
+      this.setPositionBX(bx - 1);
     }
     this.refreshPosition(3);
 };
 Entities.prototype.moveRight = function(map) {
-    if (this.getPositionBX() < map.getDimensionH()) {
+    if (this.getPositionBX() < config.boundary.v) {
         var bx = parseInt(this.getPositionBX());
-        if (map.allow(bx + 1, this.getPositionBY())) {
-            var nextPosition = this.getPositionX() + this.getPassos();
-            this.setPosition({
-                'x': nextPosition,
-                'y': this.getPositionY()
-            });
-            this.setPositionBX(bx + 1);
-        }
+        var nextPosition = this.getPositionX() + this.getPassos();
+        this.setPosition({
+            'x': nextPosition,
+            'y': this.getPositionY()
+        });
+        this.setPositionBX(bx + 1);
+        
     }
     this.refreshPosition(2);
 };

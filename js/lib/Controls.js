@@ -7,7 +7,7 @@ window.Controls = function(charset) {
               Requests.post(controlsURL+"moveup.json",{x:charset.getPositionX(), y:charset.getPositionY()},function(data){
                   console.log(data)
                   if(data.allow){
-                      charset.moveUp(map);
+                      charset.moveUp();
                       console.log('moveup')
                   }
               });
@@ -15,7 +15,7 @@ window.Controls = function(charset) {
           case 115:
               Requests.post(controlsURL+"movedown.json",{x:charset.getPositionX(), y:charset.getPositionY()},function(data){
                   if(data.allow){
-                      charset.moveDown(map);
+                      charset.moveDown();
                       console.log('movedown')
                   }
               });
@@ -23,7 +23,7 @@ window.Controls = function(charset) {
           case 97:
               Requests.post(controlsURL+"moveleft.json",{x:charset.getPositionX(), y:charset.getPositionY()},function(data){
                   if(data.allow){
-                      charset.moveLeft(map);
+                      charset.moveLeft();
                       console.log('moveleft')
                   }
               });
@@ -31,7 +31,7 @@ window.Controls = function(charset) {
           case 100:
               Requests.post(controlsURL+"moveright.json",{x:charset.getPositionX(), y:charset.getPositionY()},function(data){
                   if(data.allow){
-                      // charset.moveRight(map);
+                      charset.moveRight();
                       console.log('moveright')
                   }
               });
@@ -39,7 +39,7 @@ window.Controls = function(charset) {
           case 13:
               Requests.post(controlsURL+"gotitem.json",{x:0,y:0},function(data){
                   if(data.allow){
-                      // charset.gotItem(map);
+                      // charset.gotItem();
                       console.log('gotItem')
                   }
               });
