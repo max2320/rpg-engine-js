@@ -23,7 +23,7 @@ Login.prototype.login_window = function() {
   this.form.submit(this.formSubmit)
   this.form.append(this.loginField);
   this.form.append(this.passwordField);
-
+  
   $('body').append(this.overlay);
 };
 Login.prototype.formSubmit = function(event){

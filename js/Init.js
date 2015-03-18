@@ -9,10 +9,15 @@ var scripts=[
 ];
 
 $(function(){
+  var moduleLoad=0;
   scripts.forEach(function(src,e){
     console.log("Class::" + src);
-    $('head').append($('<script>').attr('src',src));
+    $('head').append($('<script>').attr('src',src).load(function(){moduleLoad++; loaded(); }));
   });
-  var charset=new Charset('p1');
-  charset.render('#game')
+  function loaded(){
+    if(script.length == moduleLoad){
+      var charset=new Charset('p1');
+      charset.render('#game')
+    }
+  }
 })
