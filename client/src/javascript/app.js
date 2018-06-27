@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-import {createApolloClient} from './client';
+import Engine from './components/engine';
+
+import { createApolloClient } from './libs/client';
+import { ApolloProvider } from 'react-apollo';
 
 
 export default class App extends Component{
@@ -11,7 +14,9 @@ export default class App extends Component{
 
   render(){
     return (
-      <div>It is alive</div>
+      <ApolloProvider client={this.apollo()}>
+        <Engine />
+      </ApolloProvider>
     );
   }
 }

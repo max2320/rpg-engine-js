@@ -6,6 +6,7 @@
   "scripts": {
     "start-server": "babel-node server/init.js",
     "start-cli": "babel-node client/init.js",
+    "start": "babel-node boot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/max2320/rpg-engine-js#readme",
   "dependencies": {
+    "apollo-cache-inmemory": "^1.2.5",
     "apollo-client": "^2.3.5",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
@@ -44,9 +46,11 @@
     "graphql": "^0.13.2",
     "graphql-tools": "^3.0.2",
     "morgan": "~1.9.0",
+    "node-sass": "^4.9.0",
     "node-sass-middleware": "^0.11.0",
     "pg": "^4.5.1",
     "react": "^16.4.1",
+    "react-apollo": "^2.1.6",
     "react-dom": "^16.4.1",
     "react-loader": "^2.4.5",
     "serve-favicon": "~2.4.5",
