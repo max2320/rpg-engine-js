@@ -1,3 +1,7 @@
+@import 'leaflet.temp';
+
+
+
 html,
 body{
   margin: 0;
@@ -14,8 +18,10 @@ body{
 
 .game{
   &-map{
-
+    width: 800px;
+    height: 800px;
   }
+
   &-hud{
 
   }
