@@ -1,0 +1,6 @@
+.env
+npm-debug.log
+node_modules/
+yarn-error.log
+client/public/js/init.js
+home/max/apps/maxfs/rpg-engine/rpg-engine/client/public/tile
