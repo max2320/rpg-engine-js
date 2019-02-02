@@ -9,7 +9,12 @@ const typeDefs = [
   ...types
 ];
 
-export const schema = makeExecutableSchema({
+
+const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
 });
+
+process.graphql = {
+  schema: schema
+};
